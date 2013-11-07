@@ -255,7 +255,7 @@ class PluzzDLM3U8( object ):
 			if( os.name == "nt" ):
 				commande = "ffmpeg.exe -i %s -vcodec copy -acodec copy %s 1>NUL 2>NUL" % ( self.nomFichier, self.nomFichierFinal )
 			else:
-				commande = "ffmpeg -i %s -vcodec copy -acodec copy %s 1>/dev/null 2>/dev/null" % ( self.nomFichier, self.nomFichierFinal )
+				commande = "avconv -crf 20 -i %s -vcodec copy -acodec copy %s" % ( self.nomFichier, self.nomFichierFinal )
 			if( os.system( commande ) == 0 ):
 				os.remove( self.nomFichier )
 				logger.info( "Fin !" )

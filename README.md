@@ -6,5 +6,11 @@ French IP, if you live outside of France, a proxy should be used. See
 `proxy_fetch.sh` for an example of how to use a proxy (set to
 127.0.0.1:8080 in the proxy example).
 
+# Some deps
+
+If you are running ubuntu linux, please do the following:
+
+	sudo apt-get install x264 avconv python-socksipy python-beautifulsoup
 
 
+	
